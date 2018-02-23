@@ -38,28 +38,6 @@ public class LoginFilter implements Filter {
 			response.sendRedirect(loginURI);
 		}
 
-		//		HttpServletRequest req = (HttpServletRequest)request;
-		//		HttpServletResponse resp = (HttpServletResponse)response;
-		//		
-		//		String loginURL = req.getContextPath() + "/LoginServlet";
-		//
-		//		HttpSession session = req.getSession();// don't create if it doesn't exist
-		//		if(session != null && !session.isNew()) {
-		//			System.out.println("AAAAAAAAAAAAA");
-		//			chain.doFilter(request, response);
-		//		} else {
-		//			System.out.println("BBBBBBBBBBBBB");
-		//			resp.sendRedirect(loginURL);
-		//		}
-
-
-		//		if (!isAuth()) {
-		//			resp.sendError(HttpServletResponse.SC_UNAUTHORIZED);
-		//			return; //break filter chain, requested JSP/servlet will not be executed
-		//		}
-		//
-		//		//propagate to next element in the filter chain, ultimately JSP/ servlet gets executed
-		//		chain.doFilter(request, response);        
 	}
 
 	public void destroy() {
