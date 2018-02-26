@@ -8,11 +8,10 @@
 	
 	<display-name>Archetype Created Web Application</display-name>
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 		<welcome-file>link.html</welcome-file>
 		<welcome-file>home.jsp</welcome-file>
 		<welcome-file>firstPage.jsp</welcome-file>
-		<welcome-file>secondPage.jsp</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<description></description>

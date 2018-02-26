@@ -1,18 +1,27 @@
-<!DOCTYPE html> 
-<html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!DOCTYPE html>
+<html ng-app="app">
 <head>
-<meta charset="ISO-8859-1">
-<title>Vins Project Session</title>
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.4.0/angular.js"></script>
+<script src="js/main.js"></script>
+<body ng-controller="myCtrl">
+	<div align="center">
+		<a href="LogoutServlet">Logout</a>
+		<ul style="list-style-type: none;">
+		<br>
+			<li ng-repeat="item in items">{{ item }}
+				<button ng-click="remove($index)">Elimina</button>
+			</li>
+			
+		</ul>
 
-</head>
-<body>
-<div ng-controller="editCtrl">
-    Nome :<input type="text" ng-model="Users.name" />
-    Cognome :<input type="text" ng-model="Users.lastname" />
-    <a href="#" ng-click="Back()">Edit</a>
-</div>
-</form> 
+		<div>
+			<input type="text" ng-model="input">
+			<button type="submit" ng-click="add()">Aggiungi</button>
+		</div>
+	</div>
 </body>
 </html>

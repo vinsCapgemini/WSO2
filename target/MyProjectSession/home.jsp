@@ -22,13 +22,12 @@
 <body ng-app="myApp">
 	<div ng-controller="myCtrl" align="center">
 		<a href="LogoutServlet">Logout</a>
-		<form action="firstPage">
+		<form action="${pageContext.request.contextPath}/firstPage.jsp">
 			<jsp:useBean id="now" class="java.util.Date" />
 			<fmt:formatDate var="date" value="${now}" pattern="dd/MM/yyyy HH:mm" />
 			<p>Data corrente: ${date}</p>
 
-			<input type="text" id="value" name="value"> <input
-				type="button" value="Vai alla Seconda Pagina">
+			<input type="submit" value="Vai alla Seconda Pagina">
 		</form>
 	</div>
 </body>
